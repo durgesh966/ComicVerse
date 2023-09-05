@@ -1,0 +1,308 @@
+body {
+  padding-top: 42px;
+  /* Adjust the value based on the height of your navigation bar */
+  margin: 0;
+  color: aliceblue;
+  min-height: 100vh;
+  font-family: "Jost", sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, hsl(210, 76%, 37%), #24243e);
+  background-attachment: fixed;
+}
+
+.navbar {
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+nav {
+  /* background-color: #333; */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+  width: 100%;
+}
+
+/* ----- dashboard-title design ---- */
+.dashboard-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Comic Sans MS", cursive;
+}
+
+.comic-title {
+  font-size: 40px;
+  margin: 0 20px;
+}
+
+/* ---- end ---- */
+
+/* admin page  */
+.admin {
+  max-width: 100vw;
+  max-height: 74vh;
+  overflow-y: scroll;
+  background: linear-gradient(to bottom, #0f0c29, #175fa7, #24243e);
+  height: calc(100vh - 10px);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.container {
+  background: #08032d;
+  width: 100vw;
+}
+
+.content {
+  padding: 20px;
+}
+
+/* end */
+/* main book */
+.admin0 {
+  /* min-width: 100vw; */
+  max-width: 150vw;
+  max-height: 94vh;
+  overflow-y: scroll;
+  background: linear-gradient(to bottom, #0f0c29, #175fa7, #24243e);
+  height: calc(100vh - 10px);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.content0 {
+  padding: 10px;
+}
+
+.card-content {
+  font-size: 20px;
+}
+
+/* end */
+.stories-message {
+  font-size: 25px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.stories-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stories-table th,
+.stories-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.story-title {
+  color: #d0d0d0;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dash-status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.public {
+  background-color: green;
+  color: white;
+}
+
+.private {
+  background-color: red;
+  color: white;
+}
+
+.btn-edit {
+  background-color: #7ff3c38e;
+  color: #212529;
+  border: none;
+  border-radius: 0px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.btn-delete {
+  background-color: #fa001991;
+  color: white;
+  border: none;
+  /* padding: 5px 10px; */
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.no-stories-message {
+  font-size: 50px;
+  color: #ff0000;
+  margin-top: 20px;
+}
+
+
+/* Styling the container for positioning */
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Styling the input field */
+/* Example link: <link rel="stylesheet" href="path/to/font-awesome/css/all.min.css"> */
+
+/* Style the form to make elements align in one line */
+#search-site {
+  display: flex;
+  align-items: center;
+}
+
+/* Style the input group container */
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+}
+
+/* Style the "All Stories" heading */
+.storyName {
+  margin-right: 20px;
+}
+
+.input-field{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+
+#search{
+  height: 30px;
+  width: 0;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: #22a6b3;
+  padding-right: 40px;
+  color:#fff;
+}
+#search::placeholder{
+  color:rgba(255,255,255,.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:#ffffff ;
+  background-color:transparent;
+  pointer-events: painted;  
+}
+.btn-search:focus ~ #search{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+#search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+#search-btn{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* ------- story css seting --------- */
+.card {
+  background: #464646;
+  border-radius: 10px;
+}
+
+
+/* add css in add story area */
+.input-area,.select-area{
+ background-color: #ffffff;
+ width: 30vw;
+ border-radius: 10px;
+ padding: 0 20px;
+}
+/* end add css in add story area */
+
+/* media screen for responsiveness */
+
+@media screen and (max-width: 768px) {
+  .comic-title {
+    font-size: 30px;
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .comic-title {
+    font-size: 18px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .stories-message {
+    font-size: 18px;
+  }
+
+  .myid {
+    margin-left: 50px;
+    /* height: 40vh; */
+  }
+
+  .circle {
+    width: 20vh;
+    bottom: 50px;
+  }
+
+  .card-action {
+    top: 0;
+  }
+
+  .storyName {
+    font-size: 24px;
+  }
+  .input-field{
+    width: fit-content;
+  }
+  
+  .input-group {
+    width: 100vw;
+   display: flex;
+   flex-direction: column;
+  }
+}

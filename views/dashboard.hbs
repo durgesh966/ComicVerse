@@ -1,0 +1,45 @@
+<h3 class="name">Welcome {{name}}</h3>
+<p class="stories-message">Here are your stories</p>
+{{#if stories}}
+
+ <div class="admin">
+    <div class="content">
+<table class="striped stories-table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each stories}}
+        {{!-- {{> _add_btn}} --}}
+        <tr>
+            <td><a href="/stories/{{_id}}" class="story-title">{{title}}</a></td>
+            <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+            <td><span class="dash-status {{status}}">{{status}}</span></td>
+            <td>
+                <a href="/stories/edit/{{_id}}" class="btn btn-edit">
+                    <i class="fas fa-edit"></i>
+                </a>
+
+                <form action="/stories/{{_id}}" method="POST" id="delete-form">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-delete">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>
+</div>
+{{else}}
+<p class="no-stories-message">You have not created any stories</p>
+{{/if}}
+
+{{> _add_btn}}

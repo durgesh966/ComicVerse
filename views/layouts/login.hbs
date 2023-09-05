@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+        integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>ComicVerse Login</title>
+</head>
+
+<body>
+    {{!-- Existing User --}}
+    <div class="main container login-container">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <div class="signup">
+            <label for="chk" aria-hidden="true">Login</label>
+            <div class="join-container">
+                <main class="join-main">
+                    {{{body}}}
+                </main>
+            </div>
+        </div>
+        {{!-- end --}}
+        <!-- this section will be used for new user  -->
+        <div class="login">
+            <form>
+                <label for="chk" aria-hidden="true">About ComicVerse</label>
+                <p class="pera">
+                    **Welcome to ComicVerse!**
+                    <br>
+                    !..Get ready to embark on a hilarious and adventurous journey into the world of comic storytelling!
+                    ComicVerse is your one-stop destination for comic books and graphic novels that will tickle your funny bone and ignite your imagination.
+                    <hr>
+                     !..Step into a realm where vivid illustrations and witty verses come together to weave captivating
+                    tales like never before. From zany characters to epic adventures, each page is a gateway to a
+                    universe filled with humor, excitement, and boundless creativity.
+                    <hr>
+                     !..So, open up the digital pages of ComicVerse and prepare to be enchanted by the endless wonders that
+                    await. Join us on this thrilling ride where stories come to life in a delightful comic extravaganza!
+                    <hr>
+                    Start flipping, scrolling, and laughing – ComicVerse awaits your arrival!
+                </p>
+            </form>
+            </main>
+        </div>
+    </div>
+    {{!--------------- JavaScript -------------------}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

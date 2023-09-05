@@ -1,0 +1,50 @@
+<ul class="search-form">
+  <li>
+    <form id="search-site" action="/stories/search/:query" method="get">
+      <div class="input-group">
+        <h4 class="storyName">All Stories</h4>
+        <div class="input-field">
+          <button class="btn-search"><i class="fas fa-search"></i></button>
+          <input
+            id="search"
+            type="search"
+            name="query"
+            placeholder="Search by title"
+          />
+        </div>
+        <button id="search-btn" type="submit" class="input-group-addon btn">search</button>
+
+      </div>
+
+    </form>
+  </li>
+</ul>
+<div class="admin">
+  <div class="content">
+    <div class="row">
+      {{#each stories}}
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              {{!-- {{{editIcon user ../user _id}}} --}}
+            </div>
+            <div class="card-content center-align">
+              <h5>{{title}}</h5>
+              <p>{{stripTags (truncate body 150)}}</p>
+              <br />
+              <div class="chip">
+                <img src="{{user.image}}" alt="" />
+                <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
+              </div>
+            </div>
+            <div class="card-action center-align">
+              <a href="/stories/{{_id}}" class="btn grey">Read More</a>
+            </div>
+          </div>
+        </div>
+      {{else}}
+        <p>No stories to display</p>
+      {{/each}}
+    </div>
+  </div>
+</div>

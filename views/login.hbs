@@ -1,0 +1,20 @@
+<h3 style="color: aliceblue;"><i class="fas fa-book-reader"></i> ComicVerse</h3>
+<div class="section">
+    <p class="lead" style="color: aliceblue;">
+    <h5 style="color: aliceblue;"><i>"Unlock Your Superpowers: Dive Into a World of Comics Books!"</i></h5>
+    </p>
+</div>
+<div class="divider"></div>
+<div class="section">
+    <form action="/auth/local/login" method="POST">
+    </form>
+    <a href="/auth/google" class="button btn darken-1">
+        <i id="ico" class="fab fa-google"></i> Log In With Google
+    </a>
+    <div class="warning-box">
+    <p class="login-note" v-if="!additionalLoginMethodsAvailable">Currently, we only provide login with Google. More
+        login methods will be available in the
+        future.</p>
+        </div>
+</div>
+
