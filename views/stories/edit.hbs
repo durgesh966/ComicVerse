@@ -1,16 +1,15 @@
-<h3>Edit Story</h3>
+<h4>Edit Story</h4>
 <div class="row">
     <form action="/stories/{{story._id}}" method="POST" class="col s12">
-        <input type="hidden" name="_method" value="PUT">
         <div class="row">
-            <div class="input-field">
-                <input type="text" id="title" name="title" value="{{story.title}}">
-                <label for="title">Title</label>
+            <div class="input-area">
+                <input type="hidden" name="_method" value="PUT">
+                <label for="title" style="font-size: 16px;" value="{{story.title}}"></label>
             </div>
         </div>
 
         <div class="row">
-            <div class="input-field">
+            <div class="select-area">
                 <select id="status" name="status">
                     {{#select story.status}}
                     <option value="public" selected>Public</option>
@@ -22,9 +21,9 @@
         </div>
 
         <div class="row">
-            <div class="input-field">
+            <div class="pera-area">
                 <h5>Tell Us Your Story:</h5>
-                <textarea id="body" name="body">{{story.body}}</textarea>
+                <textarea class="text-area" id="body" name="body">{{story.body}}</textarea>
             </div>
         </div>
 
